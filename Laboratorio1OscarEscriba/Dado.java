@@ -7,7 +7,12 @@ public class Dado {
     private int dado2; 
     private Random GenerarRandom; 
 
-    //constructor de la clase dado. 
+    //constructor de la clase dado.  
+    public Dado() { 
+        dado1 =0; 
+        dado2 =0; 
+        GenerarRandom = new Random(); 
+    }
     public Dado(int dado1, int dado2) {  
         this.dado1 = dado1; 
         this.dado2 = dado2; 
