@@ -37,7 +37,7 @@ public class Computadora {
     public void setcontinuidadCPU(int continuidadCPU) { 
         this.continuidadCPU=continuidadCPU; 
     }
-    public int PuntosPorTurnoCPU(int PuntosPorRondaCPU) {  
+    public int PuntosPorRondaCPU(int PuntosPorRondaCPU) {  
         Dado tiro1 = new Dado(); 
         Dado tiro2 = new Dado(); 
         int v1 =tiro1.getdado1(); 
@@ -51,7 +51,7 @@ public class Computadora {
         }
         return PuntosPorRondaCPU; 
     } 
-public int SumatoriaPuntosTotalesCPU (int PuntosTotalesCPU) {  
+public int PuntosTotalesCPU (int PuntosTotalesCPU) {  
     PuntosTotalesCPU += PuntosPorRondaCPU; 
     return PuntosTotalesCPU; 
 }  
@@ -61,9 +61,9 @@ public int SumatoriaPuntosTotalesCPU (int PuntosTotalesCPU) {
  */
 public int seguirCPU(int continuidadCPU) { 
     if (accion){ 
-        continuidadCPU =1; 
+        continuidadCPU =0; 
     }else { 
-        continuidadCPU=0; 
+        continuidadCPU=1; 
     }
 return continuidadCPU;   
 }

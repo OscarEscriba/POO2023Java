@@ -38,22 +38,24 @@ public class Jugador {
         this.continuidad=continuidad; 
     }
 // metodos para que cada clase realice la accion corespondiente en la clase Jugador. 
-public int PuntosPorTurno(int PuntosPorRonda) { 
+public int PuntosPorRonda(int PuntosPorRonda) { 
     Dado valor1= new Dado();  
     Dado valor2 = new Dado(); 
     int v1 =valor1.getdado1(); 
     int v2 =valor2.getdado2(); 
     if (v1 ==1 || v2 ==1){ 
-        PuntosPorRonda =0; 
+        PuntosPorRonda =0;  
+        continuidad=1; 
     } else { 
-        PuntosPorRonda += v1 + v2; 
+        PuntosPorRonda += v1 + v2;  
+        continuidad=0; 
     }
     /* estamos generando el tiro en el dado , nos queda obtener los valores de los dados y hacer las respectivas comprobaciones
     la parte de las comprobaciones y sumatorias las podemos ver en chatGPT. Despues de realizar eso nos queda solo ir sumando cantidades
     dentro de los parametros que se van a mandar a la clase principal. */ 
     return PuntosPorRonda; 
 } 
-public int SumatoriaPuntosTotales (int PuntosTotales) {  
+public int PuntosTotales (int PuntosTotales) {  
     PuntosTotales += PuntosPorRonda; 
     return PuntosTotales; 
 }  

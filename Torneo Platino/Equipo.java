@@ -10,7 +10,8 @@ public class Equipo {
     public Equipo() { 
     }  
     /* 
-     * Son los atributos de la clase 
+     * Son los atributos de la clase, almacenan informacion del equipo. Son variables de acceso privado, esto significa que solo pueden 
+     * ser accedidas directamente dentro de la clase. 
      */
     private String nombre; 
     private int posicion; 
